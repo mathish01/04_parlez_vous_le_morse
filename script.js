@@ -1,3 +1,31 @@
+const latinToMorse = {
+    'A':'.-',
+    'B':'-...',
+    'C':'-.-.',
+    'D':'-..',
+    'E':'.',
+    'F':'..-.',
+    'G':'--.',
+    'H':'....',
+    'I':'..',
+    'J':'.---',
+    'K':'-.-',
+    'L':'.-..',
+    'M':'--',
+    'N':'-.',
+    'O':'---',
+    'P':'.--.',
+    'Q':'--.-',
+    'R':'.-.',
+    'S':'...',
+    'T':'-',
+    'U':'..-',
+    'V':'...-',
+    'W':'.--',
+    'X':'-..-',
+    'Y':'-.--',
+    'Z':'--..'
+}
 
 
 function getLatinCharacterList (text) {
@@ -14,34 +42,6 @@ console.log (result)
 
 function translateLatinCharacter (character) {
 
-    const latinToMorse = {
-        'A':'.-',
-        'B':'-...',
-        'C':'-.-.',
-        'D':'-..',
-        'E':'.',
-        'F':'..-.',
-        'G':'--.',
-        'H':'....',
-        'I':'..',
-        'J':'.---',
-        'K':'-.-',
-        'L':'.-..',
-        'M':'--',
-        'N':'-.',
-        'O':'---',
-        'P':'.--.',
-        'Q':'--.-',
-        'R':'.-.',
-        'S':'...',
-        'T':'-',
-        'U':'..-',
-        'V':'...-',
-        'W':'.--',
-        'X':'-..-',
-        'Y':'-.--',
-        'Z':'--..'
-    }
 if (latinToMorse[character]) {
     return latinToMorse[character]
 } else {
@@ -53,6 +53,7 @@ if (latinToMorse[character]) {
 const resultMorse = translateLatinCharacter('A'); 
 console.log(resultMorse)
 
+//////////////////////////////////////////////////////////////////
 
 function enCode (text) {
     const characterList = getLatinCharacterList(text)
@@ -73,5 +74,5 @@ if(i < characterList.length - 1) {
 return morseMessage
 }
 
-const encodedMessage = enCode("Hello, World")
-console.log(encodedMessage)
+
+console.log(enCode('Hello World'))
